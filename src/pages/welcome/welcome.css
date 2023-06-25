@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #FAFAFA;
+    }
+    
+    .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+    width: 90%;
+    margin: 0 auto;
+    }
+    
+    
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .column {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+    
+    .screenContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FAFAFA;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .innerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    }
+    
+    textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
+    overflow: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    }
+    
+    button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2B9ED3;
+    color: #FFF;
+    cursor: pointer;
+    transition: background 0.3s;
+    }
+    
+    button:hover {
+    background: #2386B9;
+    }
+    
+    .screenContainer input[type="text"] {
+    width: 80%;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    }
+
+    #jobDescriptionContainer {
+        max-width: 800px;
+        
+        margin: 0 auto;
+      }
+      
+      #jobDescriptionContainer .inputGroup {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      #jobDescriptionContainer .row {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+      
+      #jobDescriptionContainer .row label {
+        flex: 1 1 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      
+      #jobDescriptionContainer textarea, 
+      #jobDescriptionContainer input[type="text"] {
+        width: 100%;
+      }
+      
+      #jobDescriptionContainer button {
+        align-self: center;
+      }
+      
+      #jobDescriptionContainer h3 {
+        margin-top: 20px;
+      }
+      

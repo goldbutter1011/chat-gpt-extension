@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Email Preview</title>
+    <link rel="stylesheet" type="text/css" href="welcome.css">
+  </head>
+  
+  <body>
+    <!-- Navigation Container -->
+    <div id="navContainer">
+      <button id="homeButton">Home</button>
+      <button id="aiEmailButton">AI Email</button>
+      <button id="chatBotButton">Chat Bot</button>
+      <button id="jobDescriptionButton">Job Description</button> 
+      <button id="emailSequencerButton">Email Sequencer</button> 
+    </div>
+
+    <!-- Welcome Screen Container -->
+    <div id="welcomeScreen" class="screenContainer">
+      <div class="innerContainer">
+        <img src="../../assets/images/icon.png" alt="logo">
+        <h1>Welcome to the Future Sales</h1>
+        <p>We're going to make you rich with our state of the art email tracking and analysis. Ready to propel your sales to new heights? Log in and let's get started.</p>
+        <button id="loginButton">Log in</button>
+        <button id="logoutButton" style="display: none;">Log out</button>
+        <button id="continueButton" style="display: none;">AI Email</button>
+      </div>
+    </div>
+<!-- Wrap AI Email Containers in a grid container -->
+<div class="container">
+  <div class="column">
+      <!-- AI EMAIL SCREEN Responder Container -->
+    <div id="aiEmailResponder" class="screenContainer">
+      <div class="innerContainer">
+        <h2>Import Email to Begin the Process </h2>
+        <div class="content">
+          <textarea id="largeTextBox" rows="10" placeholder="Enter email content here"></textarea>
+        </div>
+        <button id="import">Import</button>
+      </div>
+    </div>
+          </div>
+
+      <!-- AI EMAIL SCREEN - AI Responder Container -->
+      <div id="aiResponderContainer" class="screenContainer">
+          <div class="innerContainer">
+          <h2>AI Responder </h2>
+          <div class="content">
+              <p>Custom Prompt: <input type="text" id="customPrompt"></p>
+              <button id="generateEmailProposal">Generate Email Proposal</button>
+              <h3>Email Preview</h3>
+              <textarea id="aiOutput" rows="10" cols="50" readonly></textarea>
+          </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="column">
+      <!-- AI EMAIL SCREEN -Sales Information Container -->
+      <div id="salesInformationContainer" class="screenContainer">
+          <div class="innerContainer">
+          <h2>Sales Information </h2>
+          <div class="content">
+                  <div class="row">
+                      <div class="column">
+                          <p>Business Info:</p>
+                          <textarea id="businessInfo"></textarea>
+                      </div>
+                      <div class="column">
+                          <p>AI Summary:</p>
+                          <textarea id="aiSummary"></textarea>
+                      </div>
+                  </div>
+                  <p>Product to be Sold: <input type="text" id="product"></p>
+                  <p>About Product: <input type="text" id="aboutProduct"></p>
+                  <p>Client Problem: <input type="text" id="problem"></p>
+                  <p>Proposed Solution: <input type="text" id="solution"></p>
+                  <button id="generateSummary">Generate AI Sales Email</button>
+                  <button id="second email">Follow up</button>
+                  <button id="Reply Email">Reply to customer</button>
+                  <button id="Hard Push Email">Generate Pushy Sales Email</button>
+                  <p>AI Summary:</p>
+                  <textarea id="aiSalesSummary" rows="10" cols="50"></textarea>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+    <!-- Chat Bot Container -->
+    <div id="chatBotContainer" class="screenContainer" style="display: none;">
+      <div class="innerContainer">
+        <h2>Chat Bot </h2>
+        <div class="content">
+          <div id="chatHistory" style="overflow-y: scroll; height: 300px; border: 1px solid #ddd; padding: 10px; margin-bottom: 10px;"></div>
+          <input type="text" id="chatInput" style="width: 70%;">
+          <button id="sendButton">Send</button>
+        </div>
+      </div>
+    </div>
+
+<!-- Job Description Generator Container -->
+<div id="jobDescriptionContainer" class="screenContainer" style="display: none;">
+  <div class="innerContainer">
+    <h2>Job Description Generator</h2>
+    <div class="content">
+      <div class="inputGroup">
+        <div class="row">
+          <label>Job Title: <input type="text" id="jobTitle"></label>
+          <label>Job Location: <input type="text" id="jobLocation"></label>
+        </div>
+        <div class="row">
+          <label>Job Responsibilities: <textarea id="jobResponsibilities" rows="5"></textarea></label>
+          <label>Required Skills: <textarea id="requiredSkills" rows="5"></textarea></label>
+        </div>
+        <div class="row">
+          <label>Required Education: <textarea id="requiredEducation" rows="5"></textarea></label>
+          <label>Company Culture: <textarea id="companyCulture" rows="5"></textarea></label>
+        </div>
+        <label>Salary Range: <input type="text" id="salaryRange"></label>
+      </div>
+      <button id="generateJobDescription">Generate Job Description</button>
+      <h3>Job Description Preview</h3>
+      <textarea id="jobDescriptionOutput" rows="10" cols="50" readonly></textarea>
+      <button id="generateJobPostingSchema">Generate Job Posting Schema</button>
+      <h3>Job Posting Schema Preview</h3>
+      <textarea id="jobPostingSchemaOutput" rows="10" cols="50" readonly></textarea>
+    </div>
+  </div>
+</div>
+
+    <!-- Email Sequencer Container -->
+<div id="emailSequencerContainer" class="screenContainer" style="display: none;">
+  <div class="innerContainer">
+    <h2>Email Sequencer</h2>
+    <p>Import emails from Gmail labeled with unGhosted.ai. Emails will be displayed in the box below.</p>
+    <button id="importEmailsButton">Import Emails</button>
+      <div id="emailBox" class="emailBox">
+        <!-- Emails will be dynamically added here -->
+      </div>
+      
+      
+      <!-- Emails will be dynamically added here -->
+        </div>
+  </div>
+</div>
+
+
+  </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

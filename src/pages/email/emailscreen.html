@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Page</title>
+  <link rel="stylesheet" type="text/css" href="email.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Email Preview <button class="minimize">-</button></h2>
+    <button id="import">Import</button>
+    <div class="content">
+      <p>From: <span id="From"></span></p>
+      <p>Snippet: <span id="snippet"></span></p>
+      <!-- Hidden element to store the email body -->
+      <p style="display: none;">Body: <span id="body"></span></p>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h2>Sales Information <button class="minimize">-</button></h2>
+    <div class="content">
+      <p>Business URL: <input type="text" id="businessUrl"><button>Scrape</button><button>Summarize</button></p>
+      <p>LinkedIn URL: <input type="text" id="linkedinUrl"><button>Scrape</button><button>Summarize</button></p>
+      <p>Product to be Sold: <input type="text" id="product"></p>
+      <p>Client Problem: <input type="text" id="problem"></p>
+      <p>Proposed Solution: <input type="text" id="solution"></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>AI Responder <button class="minimize">-</button></h2>
+    <div class="content">
+      <p>Custom Prompt: <input type="text" id="customPrompt"></p>
+      <button>Generate Email Proposal</button>
+      <h3>Email Preview</h3>
+      <textarea id="aiOutput" rows="10" cols="50" readonly></textarea>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>User Authentication</h2>
+    <button id="login">Login</button>
+    <button id="logout">Logout</button>
+  </div>
+  <script src="email.js"></script>
+</body>
+</html>
